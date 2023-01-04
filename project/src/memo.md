@@ -34,46 +34,63 @@ eslint, prettier 설정
 
 1. .prettierrc 파일 생성
 
-2. 
-{
-    "semi": false,
-    "bracketSpacing" : true,
-    "singleQuote": true,
-    "useTabs": false,
-    "trailingComma": "none",
-    "printWidth": 80
-}
-    > semi 
+2. 해당 파일에 아래 내용 추가
+
+<pre>
+    {
+        "semi": false,
+        "bracketSpacing" : true,
+        "singleQuote": true,
+        "useTabs": false,
+        "trailingComma": "none",
+        "printWidth": 80
+    }
+</pre>
+
+<pre>
+    * semi 
     세미콜론은 안쓰겠다.
 
-    > singleQoute 
+    * singleQoute 
     문자열에 쌍따옴표가 아니라 홑따옴표를 쓰겠다.
 
-    > useTabs
+    * useTabs
     탭을 안쓰겠다.
 
-    >printWidth
+    * printWidth
     한 눈에 들어오는 문자열의 길이를 x로 잡겠다.
+</pre>
 
 3. package.json 파일 열기
 
-4. "rules: {"space-before-function-paren": "off"} "
-        
+4. 
+
+<pre>
+    "rules: {"space-before-function-paren": "off"} "
+</pre>
+
     > space-before-function-paren 
     함수를 정의할때 함수명과 그 뒤 () 괄호 간의 간격이 1칸이 존재해야하는 기본 규칙을 끄겠다.
-    ex) function myFunction () {
 
-        }
-    가 아니라
+
+    ex) 
+    function myFunction () {
+
+    }
+
+가 아니라
+
         function myFunction(){
 
         }
-    이 된다.
+    
+이 된다.
 
 
-------------------------------------------------------------
+--------------------------------
 
 vue 프로젝트 폴더 및 파일 구조 이해하기
+--
 
 - node_modules: 설치된 node 모듈이 위치해 있는 폴더. npm install 명령어를 통해 설치한 모듈이 위치하는 곳입니다.
 
@@ -161,4 +178,4 @@ Vue User Snippets 등록
 
 ============================================================================================================================================
 
-# webpackChunkName 여러 View에 동일하게 가져갈 경우 진입하는 순간 혹은 prefetch일 경우 사이트 진입시에 해당 View를 로드해온다. 연관성있는 화면의 경우 동일하게 해주면 유용할 수 있음.
+ webpackChunkName 여러 View에 동일하게 가져갈 경우 진입하는 순간 혹은 prefetch일 경우 사이트 진입시에 해당 View를 로드해온다. 연관성있는 화면의 경우 동일하게 해주면 유용할 수 있음.
